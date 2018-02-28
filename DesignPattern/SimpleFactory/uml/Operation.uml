@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>operation.Operation</OriginalElement>
+  <nodes>
+    <node x="326.0" y="91.0">operation.OperationAdd</node>
+    <node x="0.0" y="91.0">operation.OperationSub</node>
+    <node x="628.0" y="91.0">operation.OperationDiv</node>
+    <node x="151.0" y="91.0">operation.OperationReverse</node>
+    <node x="468.0" y="182.0">operation.OperationFactory</node>
+    <node x="928.0" y="91.0">operation.OperationMul</node>
+    <node x="489.0" y="0.0">operation.Operation</node>
+    <node x="479.0" y="91.0">operation.OperationSqr</node>
+    <node x="775.0" y="91.0">operation.OperationSqrt</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="operation.OperationDiv" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="691.5" y="71.0" />
+      <point x="559.0714285714286" y="71.0" />
+      <point x="15.571428571428555" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationSqr">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationSqrt" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="841.5" y="61.0" />
+      <point x="574.6428571428571" y="61.0" />
+      <point x="31.14285714285711" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationDiv">
+      <point x="21.571428571428555" y="-15.5" />
+      <point x="565.0714285714286" y="142.0" />
+      <point x="691.5" y="142.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationMul" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="993.5" y="51.0" />
+      <point x="590.2142857142858" y="51.0" />
+      <point x="46.71428571428578" y="15.5" />
+    </edge>
+    <edge source="operation.OperationAdd" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="392.5" y="71.0" />
+      <point x="527.9285714285714" y="71.0" />
+      <point x="-15.571428571428555" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationMul">
+      <point x="64.71428571428578" y="-15.5" />
+      <point x="608.2142857142858" y="162.0" />
+      <point x="993.5" y="162.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationReverse">
+      <point x="-43.14285714285711" y="-15.5" />
+      <point x="500.3571428571429" y="152.0" />
+      <point x="228.5" y="152.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationSub" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="65.5" y="51.0" />
+      <point x="496.7857142857143" y="51.0" />
+      <point x="-46.71428571428572" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationSub">
+      <point x="-64.71428571428567" y="-15.5" />
+      <point x="478.78571428571433" y="162.0" />
+      <point x="65.5" y="162.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationAdd">
+      <point x="-21.571428571428555" y="-15.5" />
+      <point x="521.9285714285714" y="142.0" />
+      <point x="392.5" y="142.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationSqr" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="operation.OperationReverse" target="operation.Operation">
+      <point x="0.0" y="-15.5" />
+      <point x="228.5" y="61.0" />
+      <point x="512.3571428571429" y="61.0" />
+      <point x="-31.14285714285711" y="15.5" />
+    </edge>
+    <edge source="operation.OperationFactory" target="operation.OperationSqrt">
+      <point x="43.14285714285711" y="-15.5" />
+      <point x="586.6428571428571" y="152.0" />
+      <point x="841.5" y="152.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8897126969416126" x="599.0" y="99.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
