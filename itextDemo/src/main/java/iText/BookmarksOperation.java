@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by zwxbest on 2018/3/1.
@@ -48,7 +49,7 @@ public class BookmarksOperation {
 
     public void createBookmarks(List<BookMark> booksmarks, String src, String dest) throws Exception {
         Document document = new Document();
-        reader=new PdfReader(src);
+        reader = new PdfReader(src);
         PdfCopy copy = new PdfCopy(document, new FileOutputStream(dest));
         document.open();
 
@@ -60,10 +61,17 @@ public class BookmarksOperation {
 
         PdfAction action;
         copy.freeReader(reader);
-        for(BookMark bookMark :booksmarks)
-        {
-             action = PdfAction.gotoLocalPage(bookMark.getNum(), destination, copy);
-             new PdfOutline(root, action, bookMark.getTitle(), false);
+        Map<BookMark, PdfOutline> maps = new HashMap<>();
+        PdfOutline outline=null;
+        PdfOutline parent=root;
+        for (BookMark bookMark : booksmarks) {
+            action = PdfAction.gotoLocalPage(bookMark.getNum(), destination, copy);
+            if(bookMark.getParent()!=null)
+                parent=maps.get(bookMark.getParent());
+            else
+                parent=root;
+            outline = new PdfOutline(parent, action, bookMark.getTitle(), false);
+            maps.put(bookMark, outline);
         }
         copy.flush();
         copy.close();

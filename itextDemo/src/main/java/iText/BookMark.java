@@ -6,6 +6,8 @@ package iText;
 public class BookMark implements Comparable{
     private String title;
     private int num;
+    private BookMark parent;
+    private String order;
 
 
 
@@ -33,5 +35,22 @@ public class BookMark implements Comparable{
 
         }
         return 0;
+    }
+
+
+    public BookMark getParent() {
+        return parent;
+    }
+
+    public void setParent(BookMark parent) {
+        this.parent = parent;
+    }
+
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
     }
 }

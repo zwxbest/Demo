@@ -4,6 +4,7 @@ import iText.BookmarksOperation;
 import pdfBox.Catalog;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by zwxbest on 2018/3/1.
@@ -14,17 +15,22 @@ public class Main {
     public static void main(String[] args) throws Exception
     {
 
-        int offset=22;
-        String filename="E:\\PDF\\Java\\Spring\\SPRING攻略\\SPRING攻略++第2版(jb51.net).pdf";
+        //要修改的3个地方
+        int offset=11;
+        String  path="E:\\PDF\\Java\\Spring";
+        String filename="Spring源码深度解析.pdf";
+
+
+         path=path+"\\";
          bookmarks=new BookmarksOperation();
         List<BookMark> bookMarks=BookMarkInput.read("bookmarks.txt",offset);
-        bookmarks.createBookmarks(bookMarks,filename,"new.pdf");
+        bookmarks.createBookmarks(bookMarks,path+filename,path+filename.replaceAll("\\.pdf","")+ UUID.randomUUID().toString()+".pdf");
 
     }
 
-    public static void EditBookMarkToXYZ(String src,String dest) throws Exception
+    public static void EditBookMarkToXYZ(String path,String filename) throws Exception
     {
-                bookmarks.editBookmarks(src,"new.pdf");
+                bookmarks.editBookmarks(path+filename,path+filename.replaceAll("\\.pdf","")+ UUID.randomUUID().toString()+".pdf");
 
     }
 

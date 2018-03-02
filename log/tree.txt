@@ -1,0 +1,36 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building log 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ log ---
+[INFO] com.nizouba:log:jar:1.0-SNAPSHOT
+[INFO] +- org.apache.logging.log4j:log4j-core:jar:2.9.1:compile
+[INFO] |  \- org.apache.logging.log4j:log4j-api:jar:2.9.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.25:test
+[INFO] |  +- (org.slf4j:slf4j-api:jar:1.7.25:test - omitted for duplicate)
+[INFO] |  \- log4j:log4j:jar:1.2.17:test
+[INFO] +- org.slf4j:slf4j-simple:jar:1.7.25:test
+[INFO] |  \- (org.slf4j:slf4j-api:jar:1.7.25:test - omitted for duplicate)
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.7.25:compile
+[INFO] |  \- (org.slf4j:slf4j-api:jar:1.7.25:compile - omitted for duplicate)
+[INFO] +- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO] +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] +- ch.qos.logback:logback-classic:jar:1.2.3:test
+[INFO] |  +- (ch.qos.logback:logback-core:jar:1.2.3:test - omitted for duplicate)
+[INFO] |  \- (org.slf4j:slf4j-api:jar:1.7.25:test - omitted for duplicate)
+[INFO] +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.9.1:compile
+[INFO] |  +- (org.slf4j:slf4j-api:jar:1.7.25:compile - omitted for duplicate)
+[INFO] |  +- (org.apache.logging.log4j:log4j-api:jar:2.9.1:compile - omitted for duplicate)
+[INFO] |  \- (org.apache.logging.log4j:log4j-core:jar:2.9.1:runtime - omitted for duplicate)
+[INFO] \- org.slf4j:log4j-over-slf4j:jar:1.7.25:compile
+[INFO]    \- (org.slf4j:slf4j-api:jar:1.7.25:compile - omitted for duplicate)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.616 s
+[INFO] Finished at: 2018-03-01T07:57:28+08:00
+[INFO] Final Memory: 12M/226M
+[INFO] ------------------------------------------------------------------------
