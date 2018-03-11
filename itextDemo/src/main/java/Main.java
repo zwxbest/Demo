@@ -16,9 +16,9 @@ public class Main {
     {
 
         //要修改的3个地方
-        int offset=11;
-        String  path="E:\\PDF\\Java\\Spring";
-        String filename="Spring源码深度解析.pdf";
+        int offset=14;
+        String  path="E:\\PDF\\Java\\并发";
+        String filename="实战Java高并发程序设计.pdf";
 
 
          path=path+"\\";

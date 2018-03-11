@@ -22,7 +22,7 @@ public class RemoveUTFBOB {
 
     public static void main(String[] args) {
 
-        convert(new File("E:\\GitHub\\Demo\\DesignPattern\\AdapterPattern\\src"), ".+\\.java");
+        convert(new File("E:\\GitHub\\Demo\\DesignPattern\\StatePattern"), ".+\\.java");
 
     }
 
