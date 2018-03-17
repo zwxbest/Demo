@@ -1,11 +1,10 @@
-package operation;
+package operation.binary;
 
 /**
  乘法类
 
  */
-public class OperationMul extends Operation
-{
+public class OperationMul extends OperationBinary {
     @Override
     public double GetResult()
     {

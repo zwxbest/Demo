@@ -1,11 +1,10 @@
-package operation;
+package operation.binary;
 
 /**
  除法类
 
  */
-public class OperationDiv extends Operation
-{
+public class OperationDiv extends OperationBinary {
     @Override
     public double GetResult()
     {

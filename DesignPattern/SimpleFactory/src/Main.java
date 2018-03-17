@@ -1,5 +1,6 @@
 import operation.Operation;
 import operation.OperationFactory;
+import operation.binary.OperationBinary;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,15 +19,11 @@ public class Main {
             String strNumberB = in.readLine();
             double strResult;
 
-            Operation oper;
-            oper = OperationFactory.createOperate(strOperate);
+            OperationBinary oper =(OperationBinary) OperationFactory.createOperate(strOperate);
             oper.setNumberA(Double.parseDouble(strNumberA));
             oper.setNumberB(Double.parseDouble(strNumberB));
             strResult = oper.GetResult();
-
             System.out.println("结果是：" + strResult);
-            in.readLine();
-
         } catch (RuntimeException ex) {
             System.out.println("您的输入有错：" + ex.getMessage());
         }

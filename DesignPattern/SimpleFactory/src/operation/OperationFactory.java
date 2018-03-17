@@ -1,5 +1,13 @@
 package operation;
 
+import operation.binary.OperationAdd;
+import operation.binary.OperationDiv;
+import operation.binary.OperationMul;
+import operation.binary.OperationSub;
+import operation.unary.OperationReverse;
+import operation.unary.OperationSqr;
+import operation.unary.OperationSqrt;
+
 /**
  运算类工厂
 

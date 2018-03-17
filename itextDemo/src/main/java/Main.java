@@ -16,9 +16,9 @@ public class Main {
     {
 
         //要修改的3个地方
-        int offset=14;
-        String  path="E:\\PDF\\Java\\并发";
-        String filename="实战Java高并发程序设计.pdf";
+        int offset=24;
+        String  path="E:\\PDF\\版本控制\\svn";
+        String filename="版本控制之道-使用SVN.pdf";
 
 
          path=path+"\\";

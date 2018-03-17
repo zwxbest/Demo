@@ -34,5 +34,11 @@ public class Employee
       double raise = salary * byPercent / 100;
       salary += raise;
    }
+
+   public double a(Manager m)
+   {
+      return m.getBonus();
+   }
+
 }
 
