@@ -1,0 +1,21 @@
+@startuml
+abstract class Operation{
+String numberA
+String numberB
+double getResult()
+}
+class OperationAdd
+class OperationDiv
+class OperationMul
+class OperationSub
+class OperationFactory{
+ +{static} Operation create()
+ }
+ class Main
+ Main..>OperationFactory
+OperationFactory ..> Operation
+Operation<|--OperationAdd
+Operation<|--OperationSub
+Operation<|--OperationMul
+Operation<|--OperationDiv
+@enduml

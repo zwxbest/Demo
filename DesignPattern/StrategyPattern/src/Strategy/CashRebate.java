@@ -1,4 +1,4 @@
-﻿package Strategy;
+package Strategy;
 
 public class CashRebate extends CashSuper
 {

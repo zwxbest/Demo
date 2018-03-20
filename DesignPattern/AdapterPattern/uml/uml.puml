@@ -1,0 +1,23 @@
+
+@startuml
+abstract class Player{
+String name
++ Attack()
++Defense()
+}
+together {
+class Guards
+class Forwards
+class Translator{
+ForignCenter player
+Attack(){player.Attack()}
+}
+class ForeignCenter{
++Attack()
++Defense()
+}
+Forwards--up|>Player
+Guards--up|>Player
+Translator--up|>Player
+Translator--right>ForeignCenter
+@enduml

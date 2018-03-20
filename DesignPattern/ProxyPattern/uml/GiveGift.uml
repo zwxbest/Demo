@@ -11,32 +11,6 @@
   </nodes>
   <notes />
   <edges>
-    <edge source="Main" target="Proxy">
-      <point x="-19.75" y="-15.5" />
-      <point x="126.42708333333333" y="218.0" />
-      <point x="74.71354166666667" y="218.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="Proxy" target="Pursuit">
-      <point x="0.0" y="-15.5" />
-      <point x="74.71354166666667" y="137.0" />
-      <point x="84.5" y="137.0" />
-      <point x="-22.25" y="15.5" />
-    </edge>
-    <edge source="Main" target="SchoolGirl">
-      <point x="19.749999999999996" y="-15.5" />
-      <point x="165.92708333333331" y="218.0" />
-      <point x="190.63541666666666" y="218.0" />
-      <point x="190.63541666666666" y="56.0" />
-      <point x="196.75" y="56.0" />
-      <point x="27.25" y="15.5" />
-    </edge>
-    <edge source="Pursuit" target="SchoolGirl">
-      <point x="22.25" y="-15.5" />
-      <point x="129.0" y="56.0" />
-      <point x="142.25" y="56.0" />
-      <point x="-27.25" y="15.5" />
-    </edge>
     <edge source="Pursuit" target="GiveGift">
       <point x="-22.25" y="-15.5" />
       <point x="84.5" y="56.0" />
@@ -52,8 +26,10 @@
       <point x="-23.75" y="15.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="170.5" y="125.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="171.0" y="125.0" />
+  <SelectedNodes>
+    <node>GiveGift</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

@@ -11,6 +11,5 @@ public class Main {
         oper.setNumberB(2);
         double result=oper.GetResult();
         System.out.println(result);
-
     }
 }

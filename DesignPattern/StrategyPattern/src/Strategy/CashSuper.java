@@ -1,4 +1,4 @@
-﻿package Strategy;
+package Strategy;
 
 public abstract class CashSuper
 {

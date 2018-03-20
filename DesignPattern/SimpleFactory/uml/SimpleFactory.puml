@@ -1,5 +1,7 @@
 @startuml
 abstract class Operation{
+String numberA
+String numberB
 double getResult()
 }
 class OperationAdd
@@ -12,10 +14,6 @@ class OperationFactory{
  class Main
  Main..>OperationFactory
 OperationFactory ..> Operation
-'OperationFactory ..> OperationAdd
-'OperationFactory ..> OperationSub
-'OperationFactory ..> OperationMul
-'OperationFactory ..> OperationDiv
 Operation<|--OperationAdd
 Operation<|--OperationSub
 Operation<|--OperationMul

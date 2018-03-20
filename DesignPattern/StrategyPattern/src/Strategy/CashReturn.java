@@ -1,5 +1,8 @@
-﻿package Strategy;
+package Strategy;
 
+/**
+ * 满减，每满多少减多少
+ */
 public class CashReturn extends CashSuper
 {
 	private double moneyCondition = 0.0d;
