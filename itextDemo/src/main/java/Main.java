@@ -1,6 +1,9 @@
+import iText.BookMark;
+import iText.BookMarkInput;
 import iText.BookmarksOperation;
 import pdfBox.Catalog;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -13,16 +16,16 @@ public class Main {
     {
 
         //要修改的3个地方
-        int offset=14;
-        String  path="E:\\PDF\\Java\\Activiti";
-        String filename="Activiti实战.pdf";
+        int offset=24;
+        String  path="E:\\PDF\\版本控制\\svn";
+        String filename="[版本控制之道-使用Subversion(第2版)].pdf";
 
 
          path=path+"\\";
          bookmarks=new BookmarksOperation();
-//        List<BookMark> bookMarks=BookMarkInput.read("bookmarks.txt",offset);
-//        bookmarks.createBookmarks(bookMarks,path+filename,path+filename.replaceAll("\\.pdf","")+ UUID.randomUUID().toString()+".pdf");
-         EditBookMarkToXYZ(path,filename);
+        List<BookMark> bookMarks= BookMarkInput.read("bookmarks.txt",offset);
+        bookmarks.createBookmarks(bookMarks,path+filename,path+filename.replaceAll("\\.pdf","")+ UUID.randomUUID().toString()+".pdf");
+//         EditBookMarkToXYZ(path,filename);
 
     }
 
