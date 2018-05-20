@@ -1,5 +1,6 @@
-import javax.sound.midi.Soundbank;
-
+/**
+ * join的用法
+ */
 public class JoinAndYield {
 
     public volatile  static int i = 0;

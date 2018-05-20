@@ -1,3 +1,6 @@
+/**
+ * 新建线程
+ */
 public class NewThreadRunnable implements Runnable {
 
     public static void main(String[] args)

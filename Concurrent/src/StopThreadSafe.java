@@ -2,6 +2,9 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.lang.invoke.VolatileCallSite;
 
+/**
+ * 不安全停止线程
+ */
 public class StopThreadSafe {
 
     public static StopThreadUnsafe.User user=new StopThreadUnsafe.User();
@@ -93,10 +96,10 @@ public class StopThreadSafe {
         new StopThreadUnsafe.ReadObjectThread().start();
         while (true)
         {
-            Thread thread = new StopThreadUnsafe.ChangeObjectThread();
+            ChangeObjectThread thread = new ChangeObjectThread();
             thread.start();
             Thread.sleep(150);
-            thread.stop();
+            thread.setStopMe();
         }
     }
 

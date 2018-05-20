@@ -1,4 +1,6 @@
-
+/**
+ * 安全停止线程的方法
+ */
 public class StopThreadUnsafe {
 
     public static User user=new User();

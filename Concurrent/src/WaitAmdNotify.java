@@ -1,3 +1,6 @@
+/**
+ * wait和notify
+ */
 public class WaitAmdNotify {
 
     final static Object object = new Object();

@@ -1,3 +1,6 @@
+/**
+ * suspendAndResume 已废弃
+ */
 public class SuspendAndResume {
     public static Object object=new Object();
     public static ChangeObjectThread t1=new ChangeObjectThread("t1");
