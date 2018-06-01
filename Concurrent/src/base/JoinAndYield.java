@@ -1,3 +1,5 @@
+package base;
+
 /**
  * join的用法
  */

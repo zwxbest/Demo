@@ -1,13 +1,11 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
-import java.lang.invoke.VolatileCallSite;
+package base;
 
 /**
- * 不安全停止线程
+ * 安全停止线程的方法
  */
-public class StopThreadSafe {
+public class StopThreadUnsafe {
 
-    public static StopThreadUnsafe.User user=new StopThreadUnsafe.User();
+    public static User user=new User();
     public static class User{
         private int id;
         private String name;
@@ -41,21 +39,10 @@ public class StopThreadSafe {
 
     public static class ChangeObjectThread extends Thread
     {
-        volatile boolean stopMe=false;
-        public void setStopMe()
-        {
-            stopMe=true;
-        }
         @Override
         public void run() {
             while (true)
             {
-
-                if(stopMe)
-                {
-                    System.out.println("exit by stop me");
-                    break;
-                }
                 synchronized (user){
                     int v=(int)(System.currentTimeMillis()/1000);
                     user.setId(v);
@@ -90,20 +77,17 @@ public class StopThreadSafe {
         }
     }
 
-
     public static void main(String[] args) throws InterruptedException
     {
-        new StopThreadUnsafe.ReadObjectThread().start();
+        new ReadObjectThread().start();
         while (true)
         {
-            ChangeObjectThread thread = new ChangeObjectThread();
+            Thread thread = new ChangeObjectThread();
             thread.start();
             Thread.sleep(150);
-            thread.setStopMe();
+            thread.stop();
         }
     }
-
-
 
 
 }

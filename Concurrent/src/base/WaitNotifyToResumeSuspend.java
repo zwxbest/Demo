@@ -1,3 +1,5 @@
+package base;
+
 /**
  * wait和notify来实现suspend和resume
  */

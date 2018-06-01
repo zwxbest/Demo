@@ -1,3 +1,5 @@
+package base;
+
 //继承thread和实现runnable创建线程
 public class NewThread {
 

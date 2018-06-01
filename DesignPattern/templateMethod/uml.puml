@@ -1,5 +1,4 @@
 @startuml
-
 class TestPaper{
 QuestionA(){sout("问题")sout("答案")+AnswerA()}
 QuestionB()

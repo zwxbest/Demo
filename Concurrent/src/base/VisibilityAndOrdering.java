@@ -1,3 +1,5 @@
+package base;
+
 /**
  * 有序性和可见性
  * Created by zwxbest on 2018/5/20.

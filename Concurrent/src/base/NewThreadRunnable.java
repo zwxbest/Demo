@@ -1,3 +1,5 @@
+package base;
+
 /**
  * 新建线程
  */
@@ -7,6 +9,7 @@ public class NewThreadRunnable implements Runnable {
     {
         Thread t1=new Thread(new NewThreadRunnable() );
         t1.start();
+        
     }
 
     @Override
