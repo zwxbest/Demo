@@ -1,12 +1,12 @@
-import com.sun.org.apache.bcel.internal.generic.NEW;
+package advanced;
 
-public class SychronizedDemo2 implements Runnable{
+public class SynchronizedDemo3 implements Runnable{
 
-    static SychronizedDemo2 instance=new SychronizedDemo2();
     static int i= 0;
 
     //抽出方法
-    public synchronized void increase()
+    //想改正，加一个static即可
+    public  synchronized void increase()
     {
         i++;
     }
@@ -22,13 +22,12 @@ public class SychronizedDemo2 implements Runnable{
 
     public static void main(String[] args) throws InterruptedException
     {
-        Thread t1=new Thread(instance);
-        Thread t2=new Thread(instance);
+        Thread t1=new Thread(new SynchronizedDemo3());
+        Thread t2=new Thread(new SynchronizedDemo3());
         t1.start();
         t2.start();
         t1.join();
         t2.join();
         System.out.println(i);
     }
-
 }

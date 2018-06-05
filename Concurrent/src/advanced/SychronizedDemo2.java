@@ -1,10 +1,12 @@
-public class SynchronizedDemo3 implements Runnable{
+package advanced;
 
+public class SychronizedDemo2 implements Runnable{
+
+    static SychronizedDemo2 instance=new SychronizedDemo2();
     static int i= 0;
 
     //抽出方法
-    //想改正，加一个static即可
-    public  synchronized void increase()
+    public synchronized void increase()
     {
         i++;
     }
@@ -20,12 +22,13 @@ public class SynchronizedDemo3 implements Runnable{
 
     public static void main(String[] args) throws InterruptedException
     {
-        Thread t1=new Thread(new SynchronizedDemo3());
-        Thread t2=new Thread(new SynchronizedDemo3());
+        Thread t1=new Thread(instance);
+        Thread t2=new Thread(instance);
         t1.start();
         t2.start();
         t1.join();
         t2.join();
         System.out.println(i);
     }
+
 }

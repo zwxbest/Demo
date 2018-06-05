@@ -1,3 +1,5 @@
+package advanced;
+
 public class TheadPriority {
 
     public static class HightPriority extends Thread{
