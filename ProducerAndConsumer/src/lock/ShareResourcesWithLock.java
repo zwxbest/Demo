@@ -27,7 +27,7 @@ public class ShareResourcesWithLock implements ShareResources {
     public void push(String threadname,String name, String gender) {
         lock.lock();
         try {
-            while (count==capacity) {
+            if (count==capacity) {
                 condition.await();
             }
             resources.add(new Resource(threadname,name,gender));
@@ -49,7 +49,7 @@ public class ShareResourcesWithLock implements ShareResources {
     public void pop(String name) {
         lock.lock();
         try {
-            while(count==0)
+            if(count==0)
             {
                 condition.await();
             }

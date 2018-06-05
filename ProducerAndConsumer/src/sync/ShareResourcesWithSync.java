@@ -19,22 +19,22 @@ public class ShareResourcesWithSync implements ShareResources {
     }
 
     synchronized public void push(String threadname,String name, String gender) {
-        while (count==capacity) {
+
+        if (count==capacity) {
             try {
                 this.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
         resources.add(new Resource(threadname,name,gender));
         count++;
-        System.out.println("execute push *************");
+        System.out.println("execute push *************threadname "+threadname+" name "+name+" gender "+gender+" count "+count);
         this.notifyAll();
     }
 
     synchronized public void pop(String name) {
-        while(count==0)
+        if(count==0)
         {
             try {
                 this.wait();
@@ -43,9 +43,8 @@ public class ShareResourcesWithSync implements ShareResources {
             }
         }
         Resource resource=resources.remove(0);
-        System.out.println(number+++" && "+name+" ## "+resource.getThreadname()+" && "+resource.getName() +  " && " + resource.getGender());
+        System.out.println("execute pop////////////"+number+++" && "+name+" ## "+resource.getThreadname()+" && "+resource.getName() +  " && " + resource.getGender()+" count "+count);
         count--;
-        System.out.println("execute pop////////////");
         this.notifyAll();
     }
 }

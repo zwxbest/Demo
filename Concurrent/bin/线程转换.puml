@@ -1,0 +1,13 @@
+@startuml
+[*]-->New
+New-right-->Runnable:t1.Start()
+Runnable-right-->TERMINATE:don't use Stop(),\nuse flag
+Runnable-->Blocked:遇到加锁
+Blocked-->Runnable:获得锁
+Runnable-->WAITING:遇到wait和join
+WAITING-->Runnable:遇到notify和join结束
+Runnable-->TIMED_WATING:join限时
+TIMED_WATING-->Runnable:join结束
+TERMINATE->[*]
+
+@enduml
