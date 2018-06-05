@@ -1,3 +1,8 @@
+package base;
+
+/**
+ * wait和notify
+ */
 public class WaitAmdNotify {
 
     final static Object object = new Object();
@@ -24,7 +29,7 @@ public class WaitAmdNotify {
             synchronized (object)
             {
                 System.out.println(System.currentTimeMillis()+"T2 started,notify one thread");
-               object.notify();
+             object.notify();
                 System.out.println(System.currentTimeMillis()+"T2 end");
                 try {
                     Thread.sleep(2000);//sleep 并不释放锁，wait释放锁

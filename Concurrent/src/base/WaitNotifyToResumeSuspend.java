@@ -1,5 +1,8 @@
-import javafx.scene.media.VideoTrack;
+package base;
 
+/**
+ * wait和notify来实现suspend和resume
+ */
 public class WaitNotifyToResumeSuspend {
 
     public static Object object=new Object();

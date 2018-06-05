@@ -1,3 +1,5 @@
+package base;
+
 public class ThreadInterrupt2 {
 
     public static void main(String[] args) throws InterruptedException

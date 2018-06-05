@@ -1,3 +1,8 @@
+package base;
+
+/**
+ * suspendAndResume 已废弃
+ */
 public class SuspendAndResume {
     public static Object object=new Object();
     public static ChangeObjectThread t1=new ChangeObjectThread("t1");
@@ -23,9 +28,12 @@ public class SuspendAndResume {
         t1.start();
         Thread.sleep(100);
         t2.start();
-        t1.resume();
-        t2.resume();
+        t1.resume();//t1的resume在suspend之后发生，可以结束
+        t2.resume();//t2的resume在suspend之前发生，无法结束
         t1.join();//等待t1结束
+        System.out.println("t1结束");//t1的resume在suspend之后发生，可以结束
         t2.join();
+        System.out.println("t2结束");//t2的resume在suspend之前发生，无法结束
+
     }
 }

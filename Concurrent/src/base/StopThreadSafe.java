@@ -1,7 +1,11 @@
+package base;
 
-public class StopThreadUnsafe {
+/**
+ * 不安全停止线程
+ */
+public class StopThreadSafe {
 
-    public static User user=new User();
+    public static StopThreadUnsafe.User user=new StopThreadUnsafe.User();
     public static class User{
         private int id;
         private String name;
@@ -35,10 +39,21 @@ public class StopThreadUnsafe {
 
     public static class ChangeObjectThread extends Thread
     {
+        volatile boolean stopMe=false;
+        public void setStopMe()
+        {
+            stopMe=true;
+        }
         @Override
         public void run() {
             while (true)
             {
+
+                if(stopMe)
+                {
+                    System.out.println("exit by stop me");
+                    break;
+                }
                 synchronized (user){
                     int v=(int)(System.currentTimeMillis()/1000);
                     user.setId(v);
@@ -73,17 +88,20 @@ public class StopThreadUnsafe {
         }
     }
 
+
     public static void main(String[] args) throws InterruptedException
     {
-        new ReadObjectThread().start();
+        new StopThreadUnsafe.ReadObjectThread().start();
         while (true)
         {
-            Thread thread = new ChangeObjectThread();
+            ChangeObjectThread thread = new ChangeObjectThread();
             thread.start();
             Thread.sleep(150);
-            thread.stop();
+            thread.setStopMe();
         }
     }
+
+
 
 
 }
