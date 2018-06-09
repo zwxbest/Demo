@@ -1,0 +1,11 @@
+@startuml
+客户端 -> 服务器:请求
+activate  服务器
+服务器 -> 数据库: 调用
+activate  数据库
+数据库->服务器:返回
+deactivate  数据库
+服务器->客户端:返回
+deactivate  服务器
+客户端->客户端:执行其他操作
+@enduml
