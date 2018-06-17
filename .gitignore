@@ -1,3 +1,5 @@
+
+
 # Compiled class file
 *.class
 
@@ -30,3 +32,7 @@ target/
 .mvn/
 .mvnw
 mvnw.cmd
+
+# jvm的idea配置文件不忽略
+!jvm/*
+jvm/out
