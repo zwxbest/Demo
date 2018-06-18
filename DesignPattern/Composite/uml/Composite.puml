@@ -1,0 +1,15 @@
+@startuml
+abstract Component{
++Add(Component)
++Remove(Component)
++Display(int depth)
+}
+Leaf -up--|>Component
+class Composite{
++Add(Component)
++Remove(Component)
++Display(int depth)
+}
+Composite-up--|>Component
+Composite "1" o-->"*"Component
+@enduml

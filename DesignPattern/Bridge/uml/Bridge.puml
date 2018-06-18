@@ -1,0 +1,14 @@
+@startuml
+abstract Abstraction{
++Operation()
+}
+RefinedAbstraction-up--|>Abstraction
+interface Implementor{
++OperationImp()
+}
+ConcreteImplementorA-up--|>Implementor
+ConcreteImplementorB-up--|>Implementor
+
+Abstraction o-> Implementor
+
+@enduml
