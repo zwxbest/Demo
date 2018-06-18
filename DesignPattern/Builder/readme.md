@@ -1,1 +1,0 @@
-![建造者模式](uml/Builder.png)

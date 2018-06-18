@@ -1,8 +1,0 @@
-策略模式和简单工厂的结合。
-优点：在策略类进行具体对象的选择，客户端只需要认识OperationContext类就可以了，减少耦合。
-1.Main和Main2的区别
-Main用了一个策略类，OperationContext来保存一个Operation实例
-Main2直接在Operation实例上进行操作。
-用策略类可以维护不止一个实例，可以在策略类中定义管理Operation实例的方法。
-在Operation定义这些方法不好，而且Operation是接口。
-2.Main和简单工厂的区别
