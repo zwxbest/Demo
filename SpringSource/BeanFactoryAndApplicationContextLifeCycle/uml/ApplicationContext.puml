@@ -1,0 +1,61 @@
+@startuml
+|#FFFFE0|容器级生命周期接口方法|
+partition 容器注册BeanFactoryPostProcessor {
+:postProcessBeanFactory();
+}
+
+partition 容器注册InstantiationAwareBeanPostProcessor {
+#C1FFC1	:postProcessBeforeInstantiation();
+}
+|#FFF0F5|Bean自身的方法|
+:调用bean的构造方法或者工厂方法;
+|#FFFFE0|容器级生命周期接口方法|
+partition 容器注册InstantiationAwareBeanPostProcessor {
+#C1FFC1	:postProcessAfterInstantiation();
+#C1FFC1	:postProcessPropertyValues();
+}
+|#FFF0F5|Bean自身的方法|
+:调用bean的set方法;
+|#E0FFFF|Bean级生命周期接口方法|
+partition bean实现BeanNameAware接口 {
+:SetBeanName();
+note right
+bean的name在哪设置?
+不设置会怎么样？
+end note
+}
+partition bean实现BeanFactoryAware接口 {
+:将BeanFactory容器实例设置到bean中;
+}
+partition bean实现ApplicationContextAware接口 {
+:将ApplicationContext容器实例设置到bean中;
+}
+|#FFFFE0|容器级生命周期接口方法|
+partition 容器装配了BeanPostProcessor后处理器 {
+#CAE1FF	:postProcessBeforeInstantiation();
+}
+note right
+InstantiationAwareBeanPostProcessor
+继承BeanPostProcessor
+会再执行一次吗？
+end note
+|#E0FFFF|Bean级生命周期接口方法|
+partition Bean实现了InitializingBean {
+:afterPropertiesSet();
+}
+|#FFF0F5|Bean自身的方法|
+:执行<bean>中init-method定义的方法;
+|#FFFFE0|容器级生命周期接口方法|
+partition 容器装配了BeanPostProcessor后处理器 {
+#CAE1FF	:postProcessAfterInstantiation();
+}
+:如果bean的scope为prototype，将bean返回给调用者
+如果是singleton，放入springIoc的缓存池中
+bean的引用返回给调用者;
+|#E0FFFF|Bean级生命周期接口方法|
+partition Bean实现了DisposableBean {
+:destroy();
+}
+|#FFF0F5|Bean自身的方法|
+:执行<bean>中destroy-method定义的方法;
+@enduml
