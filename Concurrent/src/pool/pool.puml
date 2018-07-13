@@ -1,0 +1,14 @@
+@startuml
+start
+if (实际线程数小于corePoolSize) then (yes)
+:分配任务立刻执行;
+else if(BlockingQueue没满) then (yes)
+:提交到等待队列;
+else if(小于maxPoolsize) then (yes)
+:新建线程加入线程池
+同时将任务加入
+到这个线程并执行;
+else
+:拒绝执行策略;
+end
+@enduml

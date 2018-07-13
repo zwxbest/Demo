@@ -1,0 +1,8 @@
+@startuml
+
+[类加载子系统]
+[Java栈]
+[方法区]
+[Java堆]
+[直接内存]
+@enduml

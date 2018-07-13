@@ -2,16 +2,12 @@ package pool;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
- * Created by zwxbest on 2018/5/27.
- * newFixedThreadPool返回了corePoolsize和maxnpoolsize大小相同的，用LinkedBlockingQueue
+ * Created by zwxbest on 2018/7/13.
  */
-public class FixedThreadPoolDemo {
+public class CachedThreadPool {
 
     public static class MyTask implements Runnable
     {
@@ -31,12 +27,13 @@ public class FixedThreadPoolDemo {
 
     public static void main(String[] args) {
         MyTask task=new MyTask();
-        //返回一个固定线程数量的线程池，corePoolSize和maxSize的大小一样。
-        //超过size就放到队列中等待
-        ExecutorService es= Executors.newFixedThreadPool(5);
-//     return new ThreadPoolExecutor(nThreads, nThreads,
-//                                      0L,TimeUnit.MILLISECONDS,
-//                                      new LinkedBlockingQueue<Runnable>());
+        //初始化线程池的线程容量为0
+        //线程不够用就创建，用完了放到线程池中，60s之后销毁。
+        ExecutorService es= Executors.newCachedThreadPool();
+//        new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+//                60L, TimeUnit.SECONDS,
+//                new SynchronousQueue<Runnable>());
+
         //有5个可以分配任务立即执行，另外5个放在等待队列中。
         for(int i=0;i<10;i++)
         {

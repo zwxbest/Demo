@@ -16,12 +16,23 @@ public class WarmSingleton {
      */
     private static class  SingletonHolder
     {
+        static {
+            System.out.println("SingletonHolder is create");
+        }
         private static WarmSingleton instance=new WarmSingleton();
     }
 
     public static WarmSingleton getInstance()
     {
         return SingletonHolder.instance;
+    }
+
+    public static void main(String[] args) {
+
+//        WarmSingleton warmSingleton=new WarmSingleton();
+        System.out.println(WarmSingleton.getInstance());
+        System.out.println(WarmSingleton.getInstance());
+
     }
 
 }

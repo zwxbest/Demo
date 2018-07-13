@@ -19,6 +19,12 @@ public class ThreadedBinaryTree<T>{
 
     }
 
+    /**
+     * 按层创建二叉树
+     * @param i
+     * @param objs
+     * @return
+     */
     public ThreadedTreeNode CreateByLevelOrder(int i, T[] objs) {
 
         if( (i<objs.length&&objs[i]==null)&&
@@ -37,7 +43,7 @@ public class ThreadedBinaryTree<T>{
         return node;
     }
 
-    //In Order
+    //中序遍历二叉树，同时线索化二叉树
     public void TraverseInOrderToThread(ThreadedTreeNode parent)
     {
         if (parent != null)

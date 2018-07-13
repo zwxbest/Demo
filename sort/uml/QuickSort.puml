@@ -1,0 +1,14 @@
+@startuml
+start
+:low=0,high=length-1,pivot=low;
+while(low<high?)
+while(low<high && L[high]>= L[pivot])
+:high--;
+endwhile
+:swap(L,low,high);
+while(low<high && L[high]>= L[pivot])
+:low++;
+endwhile
+:swap(L,low,high);
+endwhile
+
