@@ -2,6 +2,9 @@ package future;
 
 import sun.java2d.pipe.SpanIterator;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
@@ -21,9 +24,10 @@ public class FutureDemo  {
         {
 
         }
-        System.out.println("我要拿数据了"+System.currentTimeMillis()/1000);
-        System.out.println("数据="+futureTask.get()+" "+System.currentTimeMillis()/1000);
-        System.out.println("结束了"+" "+System.currentTimeMillis()/1000);
+        System.out.println("我要拿数据了"+ new SimpleDateFormat("mm:ss").format(new Date()));
+        //        依然会等待
+        System.out.println("数据="+futureTask.get()+" "+new SimpleDateFormat("mm:ss").format(new Date()));
+        System.out.println("结束了"+" "+new SimpleDateFormat("mm:ss").format(new Date()));
 
     }
 

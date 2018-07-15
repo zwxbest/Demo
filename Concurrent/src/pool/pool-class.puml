@@ -1,0 +1,7 @@
+@startuml
+ExecutorService--up-|>Executor
+ScheduledExecutorService-up-|>ExecutorService
+AbstractExecutorService..-left-|>ExecutorService
+ThreadPoolExecutor-left-|>AbstractExecutorService
+Executors ..up-> AbstractExecutorService
+@enduml
