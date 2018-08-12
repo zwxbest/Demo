@@ -1,0 +1,12 @@
+@startuml
+
+NioSelectorRunnablePool"1"-up->"*"Boss
+NioSelectorRunnablePool"1"-up->"*"Worker
+AbstractNioSelector..-up-|>Runnable
+NioServerBoss..-up|>Boss
+NioServerBoss--up-|>AbstractNioSelector
+NioServerWorker..-up|>Worker
+NioServerWorker--up-|>AbstractNioSelector
+ServerBootstrap->NioSelectorRunnablePool
+AbstractNioSelector->NioSelectorRunnablePool
+@enduml

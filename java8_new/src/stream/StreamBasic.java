@@ -1,12 +1,11 @@
 package stream;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.*;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
+
 
 public class StreamBasic {
 
@@ -18,8 +17,6 @@ public class StreamBasic {
 
         // Java 8
         getLowCaloricDishesNamesInJava8(Dish.menu).forEach(System.out::println);
-
-        getAverageColories(Dish.menu);
 
     }
 
@@ -45,25 +42,8 @@ public class StreamBasic {
     public static List<String> getLowCaloricDishesNamesInJava8(List<Dish> dishes){
         return dishes.stream()
                 .filter(d -> d.getCalories() > 400)
-                .sorted(comparing(x->x.getCalories()))
-                .map(Dish::getName)
-                .collect(toList());
-    }
-
-
-    public static List<String> getLowCaloricDishesNamesInJava9(List<Dish> dishes){
-        return dishes.stream()
-                .filter(d -> d.getCalories() > 400)
                 .sorted(comparing(Dish::getCalories))
                 .map(Dish::getName)
                 .collect(toList());
     }
-
-
-    public static double getAverageColories(List<Dish> dishes)
-    {
-//        return dishes.stream().mapToInt(x->x.getCalories()).average().getAsDouble();
-        return dishes.stream().mapToInt(Dish::getCalories).average().getAsDouble();
-    }
-
 }
