@@ -1,4 +1,4 @@
-package stream;
+package com.nizouba.java8_new.src.stream;
 
 import static java.util.stream.Collectors.joining;
 

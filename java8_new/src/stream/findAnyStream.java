@@ -1,6 +1,4 @@
-package stream;
-
-import java.util.Optional;
+package com.nizouba.java8_new.src.stream;
 
 /**
  * Created by zwxbest on 2018/7/30.

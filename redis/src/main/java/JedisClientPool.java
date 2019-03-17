@@ -1,7 +1,7 @@
 import org.springframework.beans.factory.annotation.Autowired;
 
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
+import com.nizouba.redis.clients.jedis.Jedis;
+import com.nizouba.redis.clients.jedis.JedisPool;
 
 public class JedisClientPool implements JedisClient {
 	

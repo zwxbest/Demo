@@ -1,7 +1,7 @@
 import org.junit.Test;
 
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
+import com.nizouba.redis.clients.jedis.Jedis;
+import com.nizouba.redis.clients.jedis.JedisPool;
 
 public class JedisTest {
 

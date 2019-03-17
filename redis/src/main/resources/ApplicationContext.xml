@@ -15,7 +15,7 @@
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
 
 <!-- 连接池配置 -->
-	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+	<bean id="jedisPoolConfig" class="com.nizouba.redis.clients.jedis.JedisPoolConfig">
 		<!-- 最大连接数 -->
 		<property name="maxTotal" value="30" />
 		<!-- 最大空闲连接数 -->
@@ -39,7 +39,7 @@
 	</bean>
 	
 	<!-- redis单机 通过连接池 -->
-	<bean id="jedisPool" class="redis.clients.jedis.JedisPool" destroy-method="close">
+	<bean id="jedisPool" class="com.nizouba.redis.clients.jedis.JedisPool" destroy-method="close">
 		<constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
 		<constructor-arg name="host" value="192.168.93.88"/>
 		<constructor-arg name="port" value="6379"/>

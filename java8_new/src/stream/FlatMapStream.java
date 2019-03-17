@@ -1,11 +1,8 @@
-package stream;
+package com.nizouba.java8_new.src.stream;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * Created by zwxbest on 2018/7/29.

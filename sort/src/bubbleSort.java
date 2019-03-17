@@ -1,5 +1,5 @@
 // bubbleSort.java
-// demonstrates bubble sort
+// demonstrates bubble com.nizouba.sort
 // to run this program: C>java BubbleSortApp
 ////////////////////////////////////////////////////////////////
 class ArrayBub
@@ -66,7 +66,7 @@ class BubbleSortApp
 
       arr.display();                // display items
 
-      arr.bubbleSort();             // bubble sort them
+      arr.bubbleSort();             // bubble com.nizouba.sort them
 
       arr.display();                // display them again
       }  // end main()

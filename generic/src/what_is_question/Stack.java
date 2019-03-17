@@ -1,4 +1,4 @@
-package what_is_question;
+package com.nizouba.generic.src.what_is_question;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,6 +1,6 @@
 import org.springframework.beans.factory.annotation.Autowired;
 
-import redis.clients.jedis.JedisCluster;
+import com.nizouba.redis.clients.jedis.JedisCluster;
 
 public class JedisClientCluster implements JedisClient {
 	

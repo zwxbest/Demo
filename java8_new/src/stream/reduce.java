@@ -1,6 +1,4 @@
-package stream;
-
-import javafx.scene.media.SubtitleTrack;
+package com.nizouba.java8_new.src.stream;
 
 import java.util.Arrays;
 import java.util.List;

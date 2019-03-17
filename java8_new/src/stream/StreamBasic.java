@@ -1,7 +1,6 @@
-package stream;
+package com.nizouba.java8_new.src.stream;
 
 import java.util.*;
-import java.util.stream.*;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;

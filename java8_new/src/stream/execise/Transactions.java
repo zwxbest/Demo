@@ -1,4 +1,4 @@
-package stream.execise;
+package com.nizouba.java8_new.src.stream.execise;
 
 import java.util.Arrays;
 import java.util.List;

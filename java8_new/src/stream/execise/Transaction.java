@@ -1,4 +1,4 @@
-package stream.execise;
+package com.nizouba.java8_new.src.stream.execise;
 
 /**
  * Created by zwxbest on 2018/7/30.

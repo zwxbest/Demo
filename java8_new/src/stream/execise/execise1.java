@@ -1,8 +1,6 @@
-package stream.execise;
+package com.nizouba.java8_new.src.stream.execise;
 
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 /**
  * Created by zwxbest on 2018/7/30.

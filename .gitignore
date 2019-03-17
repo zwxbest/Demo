@@ -4,9 +4,9 @@
 *.class
 
 # Log file
-*.log
+*.com.nizouba.log
 
-# BlueJ files
+# BlueJ com.nizouba.files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
@@ -33,6 +33,3 @@ target/
 .mvnw
 mvnw.cmd
 
-# jvm的idea配置文件不忽略
-!jvm/*
-jvm/out

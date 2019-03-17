@@ -1,4 +1,4 @@
-package com.nizouba;
+package com.nizouba.java_combiner.src.main.java.com.nizouba;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
