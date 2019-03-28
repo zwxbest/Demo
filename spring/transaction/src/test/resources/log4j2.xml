@@ -2,7 +2,7 @@
 <Configuration status="WARN">
   <Properties>
     <property name="PROJECT_NAME">transaction</property>
-    <property name="LOG_PATH">../logs/${PROJECT_NAME}/</property>
+    <property name="LOG_PATH">./logs/${PROJECT_NAME}/</property>
     <property name="LOG_FILE">transaction</property>
   </Properties>
   <Appenders>
@@ -28,7 +28,7 @@
     </RollingRandomAccessFile>
   </Appenders>
   <Loggers>
-    <AsyncLogger name="org.springframework" level="warn">
+    <AsyncLogger name="org.springframework.jdbc.datasource.DataSourceTransactionManager" level="debug">
     </AsyncLogger>
     <AsyncLogger name="org.hibernate" level="warn">
     </AsyncLogger>
