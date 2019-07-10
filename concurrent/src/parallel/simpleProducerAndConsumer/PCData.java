@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.parallel.simpleProducerAndConsumer;
+package parallel.simpleProducerAndConsumer;
 
 public final class PCData {
     private final  int intData;

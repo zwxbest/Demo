@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.advanced;//1 直接加锁对象，进入同步代码前获取给定对象的锁
+package advanced;//1 直接加锁对象，进入同步代码前获取给定对象的锁
 //2 直接作用于实例方法，进入同步块之前获取当前实例的锁
 // 3 作用于静态方法，获取当前类的锁
 

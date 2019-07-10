@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.advanced;
+package advanced;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;

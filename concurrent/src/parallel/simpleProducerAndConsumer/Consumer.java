@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.parallel.simpleProducerAndConsumer;
+package parallel.simpleProducerAndConsumer;
 
 import java.text.MessageFormat;
 import java.util.Random;

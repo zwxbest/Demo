@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.base;
+package base;
 
 /**
  * 不安全停止线程

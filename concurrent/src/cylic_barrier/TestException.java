@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.cylic_barrier;
+package cylic_barrier;
 
 import java.io.File;
 import java.io.FileInputStream;

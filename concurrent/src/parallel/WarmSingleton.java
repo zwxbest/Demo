@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.parallel;
+package parallel;
 
 /**
  * 温和单例模式

@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.advanced;
+package advanced;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

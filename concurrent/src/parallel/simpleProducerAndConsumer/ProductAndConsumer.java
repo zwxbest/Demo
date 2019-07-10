@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.parallel.simpleProducerAndConsumer;
+package parallel.simpleProducerAndConsumer;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;

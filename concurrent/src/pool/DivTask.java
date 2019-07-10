@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.pool;
+package pool;
 
 import java.util.concurrent.*;
 

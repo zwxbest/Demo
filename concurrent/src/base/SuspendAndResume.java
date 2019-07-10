@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.base;
+package base;
 
 /**
  * suspendAndResume 已废弃

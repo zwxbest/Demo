@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.advanced;
+package advanced;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;

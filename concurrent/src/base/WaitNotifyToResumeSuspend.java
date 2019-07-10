@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.base;
+package base;
 
 /**
  * wait和notify来实现suspend和resume

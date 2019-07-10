@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.reorder;
+package reorder;
 
 import lombok.Getter;
 

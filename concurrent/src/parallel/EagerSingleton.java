@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.parallel;
+package parallel;
 
 /**
  * 饿汉单例模式

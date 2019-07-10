@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.future;
+package future;
 
 import java.util.concurrent.Callable;
 

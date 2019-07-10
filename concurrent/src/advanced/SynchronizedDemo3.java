@@ -1,4 +1,4 @@
-package com.nizouba.Concurrent.src.advanced;
+package advanced;
 
 public class SynchronizedDemo3 implements Runnable{
 
