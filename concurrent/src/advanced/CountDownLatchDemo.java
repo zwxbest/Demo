@@ -13,12 +13,13 @@ public class CountDownLatchDemo implements Runnable {
 
     static final CountDownLatch end=new CountDownLatch(10);
     static final CountDownLatchDemo demo=new CountDownLatchDemo();
+    int count  = 10;
 
     @Override
     public void run() {
         try {
             Thread.sleep(new Random().nextInt(10)*1000);
-            System.out.println("check complete");
+            System.out.println(--count);
             end.countDown();//countDown代表计数减1
         }
         catch (InterruptedException e)
@@ -30,7 +31,7 @@ public class CountDownLatchDemo implements Runnable {
     public static void main(String[] args) throws InterruptedException
     {
         ExecutorService executorService= Executors.newFixedThreadPool(10);
-        for(int i=0;i<10;i++)
+        for(int i=0;i<demo.count;i++)
         {
             executorService.submit(demo);
         }
