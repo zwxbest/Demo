@@ -7,9 +7,13 @@ public class Main {
     public static void main(String[] args) {
 
         HuffMan huffMan = new HuffMan();
-        huffMan.createTree("AABCCCEECQCDDD");
+        huffMan.createTree("AABCC");
 
-        System.out.println(1);
+        System.out.println();
+
+        NoHuffMan noHuffMan = new NoHuffMan();
+        noHuffMan.encodeNoHuffMan("AABCC");
+
     }
 
 }

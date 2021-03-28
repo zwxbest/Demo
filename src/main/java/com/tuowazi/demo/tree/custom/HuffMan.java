@@ -43,10 +43,14 @@ public class HuffMan {
         genTree();//构造的树为sortedList
         //树已经构造好，更新每个节点的huffman编码
         root = sortedList.getHead().next.val;
-        updateCode(root, "0");
+        updateCode(root, "");
+        System.out.println("huffman table mapping");
+        for (Map.Entry<String, String> entry : huffmanEncodeTable.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
         String s = encodeHuff(str);
         decodeHuff(s);
-        System.out.println(1);
+        System.out.println();
     }
 
     /**
@@ -91,10 +95,6 @@ public class HuffMan {
             updateCode(node.getLeft(), code + "0");
             updateCode(node.getRight(), code + "1");
         }
-        System.out.println("huffman table mapping");
-        for (Map.Entry<String, String> entry : huffmanEncodeTable.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
     }
 
     /**
@@ -113,7 +113,7 @@ public class HuffMan {
             insertNodeSeq(parent);
             node = sortedList.getHead().next;
         }
-        System.out.println(1);
+        System.out.println();
     }
 
 
@@ -154,7 +154,7 @@ public class HuffMan {
             HNode curHNode = new HNode(entry.getKey().toString(), curWeight);
             insertNodeSeq(curHNode);
         }
-        System.out.println(1);
+        System.out.println();
     }
 
 
