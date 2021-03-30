@@ -1,16 +1,9 @@
-package com.tuowazi.demo.tree.custom;
+package com.tuowazi.demo.tree.huffman;
 
 import com.tuowazi.demo.list.linked.TwoWayLinkedList;
 
-import org.springframework.security.core.parameters.P;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
-
-import javax.swing.*;
 
 public class HuffMan {
 

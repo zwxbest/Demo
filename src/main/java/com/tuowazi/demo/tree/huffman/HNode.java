@@ -1,6 +1,5 @@
-package com.tuowazi.demo.tree.custom;
+package com.tuowazi.demo.tree.huffman;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 

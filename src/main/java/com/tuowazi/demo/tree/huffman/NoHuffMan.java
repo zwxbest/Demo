@@ -1,8 +1,5 @@
-package com.tuowazi.demo.tree.custom;
+package com.tuowazi.demo.tree.huffman;
 
-import com.google.common.collect.Sets;
-
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Map;

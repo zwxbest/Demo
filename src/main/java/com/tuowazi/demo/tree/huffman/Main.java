@@ -1,4 +1,4 @@
-package com.tuowazi.demo.tree.custom;
+package com.tuowazi.demo.tree.huffman;
 
 public class Main {
 
