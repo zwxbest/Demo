@@ -33,6 +33,28 @@ public class MyBloomFilter {
     }
 
     /**
+     * 添加元素到位数组
+     */
+    public void add(Object value) {
+        for (SimpleHash f : func) {
+            int hash = f.hash(value);
+            System.out.println(String.format("seed is %s , hash is %s", f.seed, hash));
+            bits.set(hash, true);
+        }
+    }
+
+    /**
+     * 判断指定元素是否存在于位数组
+     */
+    public boolean contains(Object value) {
+        boolean ret = true;
+        for (SimpleHash f : func) {
+            ret = ret && bits.get(f.hash(value));
+        }
+        return ret;
+    }
+
+    /**
      * 静态内部类。用于 hash 操作！
      */
     public static class SimpleHash {
@@ -53,5 +75,20 @@ public class MyBloomFilter {
             return (value == null) ? 0 : Math.abs(seed * (cap - 1) & ((h = value.hashCode()) ^ (h >>> 16)));
         }
 
+    }
+
+    public static void main(String[] args) {
+//        String value1 = "https://javaguide.cn/";
+//        String value2 = "https://github.com/Snailclimb";
+//        MyBloomFilter filter = new MyBloomFilter();
+//        System.out.println(filter.contains(value1));
+//        System.out.println(filter.contains(value2));
+//        filter.add(value1);
+//        filter.add(value2);
+//        System.out.println(filter.contains(value1));
+//        System.out.println(filter.contains(value2));
+        BitSet bits = new BitSet(DEFAULT_SIZE);
+        bits.set(2 << 25, false);
+        System.out.println(bits.get(2 << 25));
     }
 }
