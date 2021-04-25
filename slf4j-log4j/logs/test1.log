@@ -10,3 +10,5 @@
 [ERROR][2021-04-23 18:53:33,682][com.tuowazi.demo.slf4j.Test1]error
 [DEBUG][2021-04-23 19:01:30,702][com.tuowazi.demo.slf4j.Test1]debug
 [ERROR][2021-04-23 19:01:30,703][com.tuowazi.demo.slf4j.Test1]error
+[DEBUG][2021-04-23 19:05:27,953][com.tuowazi.demo.slf4j.Test1]debug
+[ERROR][2021-04-23 19:05:27,953][com.tuowazi.demo.slf4j.Test1]error
