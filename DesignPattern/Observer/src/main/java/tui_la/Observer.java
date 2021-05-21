@@ -1,4 +1,4 @@
-package la;
+package tui_la;
 
 public interface Observer {
     /**

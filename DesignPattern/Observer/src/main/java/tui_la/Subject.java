@@ -1,4 +1,4 @@
-package la;
+package tui_la;
 
 import java.util.ArrayList;
 import java.util.List;

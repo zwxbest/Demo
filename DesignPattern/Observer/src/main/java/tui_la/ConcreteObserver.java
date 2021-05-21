@@ -1,4 +1,4 @@
-package la;
+package tui_la;
 
 public class ConcreteObserver implements Observer {
     //观察者的状态
