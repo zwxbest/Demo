@@ -1,0 +1,19 @@
+@startuml
+abstract class Operation{
++VisitConcreteElementA(ConcreteElementA)
++VisitConcreteElementB(ConcreteElementB)
+}
+ConcreteVistor1-up--|>Visitor
+ConcreteVistor2-up--|>Visitor
+abstract Element{
++Accept(Visitor)
+}
+ConcreteElementA-up-|>Element
+ConcreteElementB-up-|>Element
+class ObjectStructure{
++Attach(Element)
++Detach(Element)
++Accept(Visitor)
+}
+ObjectStructure "1" o-> "*" Element
+@enduml

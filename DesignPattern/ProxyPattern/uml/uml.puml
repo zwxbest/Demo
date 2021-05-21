@@ -1,0 +1,24 @@
+@startuml
+interface GiveGift{
++GiveDolls()
++GiveFloors()
+}
+class SchoolGirl
+together {
+class Pursuit{
+Pursuit(SchoolGirl mm)
+}
+class Proxy{
+Proxy(SchoolGirl mm)
+public Proxy(SchoolGirl mm){gg = new Pursuit(mm);}
+}
+}
+Pursuit..up|>GiveGift
+Pursuit->SchoolGirl
+Pursuit..>SchoolGirl
+Proxy->Pursuit
+Proxy..|>GiveGift
+Proxy..>SchoolGirl
+class Main
+Main..>Proxy
+@enduml

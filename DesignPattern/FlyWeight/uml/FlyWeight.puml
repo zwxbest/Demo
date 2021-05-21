@@ -1,0 +1,11 @@
+@startuml
+class FlyWeightFactory{
++GetFlyWeight(int key):FkyWeight
+}
+abstract FlyWeight{
++Operation()
+}
+FlyWeightFactory o-> FlyWeight
+UnsharedConcreteFlyweight-up--|>FlyWeight
+ConcreteFlyweight-up--|>FlyWeight
+@enduml

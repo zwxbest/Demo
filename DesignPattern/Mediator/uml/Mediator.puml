@@ -1,0 +1,12 @@
+@startuml
+abstract Mediator{
++Send(Strimg msg,Colleague)
+}
+ConcreteMediator-up--|>Mediator
+abstract Colleague
+Colleague o->Mediator
+ConcreteColleague1-up--|>Colleague
+ConcreteColleague2-up--|>Colleague
+ConcreteMediator-up->ConcreteColleague1
+ConcreteMediator-up->ConcreteColleague2
+@enduml

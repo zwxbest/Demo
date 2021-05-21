@@ -1,0 +1,10 @@
+@startuml
+abstract Handler{
+SetSuccess(Handler)
+HandleRequest(int)
+}
+Handler -> Handler
+ConcreteHandler1-up--|>Handler
+ConcreteHandler2-up--|>Handler
+ConcreteHandler3-up--|>Handler
+@enduml

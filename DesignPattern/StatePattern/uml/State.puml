@@ -1,0 +1,24 @@
+@startuml
+abstract  class State{
+{abstract}WriteProgram(Work)
+}
+together {
+class AfternoonState{
+if(hour<XX)一些操作 else w.setState(next);w.WriteProgram()
+}
+class NoonState
+class EveningState
+}
+AfternoonState--up|>State
+NoonState--up|>State
+EveningState--up|>State
+class Work{
+int hour
+State current
++WriteProgram(){current.WriteProgram(this);
+}
+Work--down>State
+State..up>Work
+Class Main
+Main..down>Work
+@enduml

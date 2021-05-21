@@ -1,0 +1,23 @@
+@startuml
+abstract class tui.Subject{
++Attach(tui.Observer)
++Detach(tui.Observer)
++Notify()//通知
+}
+note "保存所有Observer,\n\
+提供接口增加和删除Observer" as N1
+N1-right-.. tui.Subject
+tui.ConcreteSubject-up--|>tui.Subject
+
+
+abstract tui.Observer{
++Update()
+}
+tui.Subject "1" o-> "*"tui.Observer
+tui.ConcreteObserver-up--|>tui.Observer
+main..>tui.Subject
+note "调用notify" as N2
+N2 -left-..main
+
+
+@enduml

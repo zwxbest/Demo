@@ -1,0 +1,14 @@
+
+@startuml
+abstract class Builder{
++BuildPartA()
++BuildPartB()
+Product GetResult()
+}
+Director ..> Builder
+ConcreteBuilder1-up--|>Builder
+ConcreteBuilder2-up--|>Builder
+ConcreteBuilder1-down-->Product
+ConcreteBuilder2-down-->Product
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+abstract class CashSuper{
++ {abstract} double acceptCash(double money)
+}
+class CashContext{
+-CashSuper cs
++setBehavior(CashSuper csuper)
++ double GetResult(double money)
+}
+class Main
+Main..>CashContext
+CashContext"1"->"1"CashSuper
+together {
+class CashNormal
+class CashRebate{
++CashRebate(String moneyRebate)
+}
+Class CashReturn{
++CashReturn(String moneyCondition, String moneyReturn)
+}
+CashNormal -up-|> CashSuper:无优惠
+CashRebate-up-|>CashSuper:折扣
+CashReturn-up-|> CashSuper:满减
+@enduml

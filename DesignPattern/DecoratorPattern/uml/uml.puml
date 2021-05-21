@@ -1,0 +1,38 @@
+@startuml
+
+
+abstract class Finery{
+# Finery compoent
++ void Decorate(Finery)
++ show(){compoent.show()}
+}
+
+ together {
+ class LeatherShoes{
+  + show(){>>"BigTrouser";super.show()}
+  }
+  class BigTrouser
+  class Suit
+  class Sneakers
+  class Tie
+  class TShirts
+ }
+
+ class Main
+Finery*-up-|>Finery
+Finery-up..>Finery
+LeatherShoes-up-|>Finery
+Sneakers-up-|>Finery
+BigTrouser-up-|>Finery
+Suit-up-|>Finery
+Tie-up-|>Finery
+TShirts-up-|>Finery
+Main..-up>Finery
+Main..-up>Sneakers
+Main..-up>BigTrouser
+Main..-up>Suit
+Suit..-up>Finery:1.Decorate(Finery)
+BigTrouser..-left>Suit:2
+Sneakers..-left>BigTrouser:3
+
+@enduml
