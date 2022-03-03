@@ -1,0 +1,53 @@
+apply plugin: "com.bytedance.android.aabResGuard"
+aabResGuard {
+    mappingFile = file("mapping.txt").toPath() // Mapping file used for incremental obfuscation
+    whiteList = [ // White list rules
+                  // your icon
+                  "R.drawable.icon",
+                  //友盟
+                  "R.string.umeng*",
+                  "R.drawable.umeng*",
+                  "R.id.umeng*",
+                  "R.anim.umeng*",
+                  "R.color.umeng*",
+                  "R.style.*UM*",
+                  "R.style.umeng*",
+                  //Firebase
+                  "R.string.project_id",
+                  // google-services
+                  "R.string.google_app_id",
+                  "R.string.gcm_defaultSenderId",
+                  "R.string.default_web_client_id",
+                  "R.string.ga_trackingId",
+                  "R.string.firebase_database_url",
+                  "R.string.google_api_key",
+                  "R.string.google_crash_reporting_api_key",
+
+                  //Mintegral
+                  "R.string.mbridge*",
+                  "R.layout.mbridge*",
+                  "R.drawable.mbridge*",
+                  "R.anim.mbridge*",
+                  "R.color.mbridge*",
+                  "R.style.mbridge*",
+                  "R.id.mbridge*",
+
+                  "R.string.anythink_*",
+                  "R.drawable.anythink_*",
+                  "R.layout.anythink_*",
+                  "R.id.anythink_*",
+//            firebase
+                  "R.string.com.crashlytics.*"
+    ]
+    obfuscatedBundleFileName = "duplicated-app.aab" // Obfuscated file name, must end with '.aab'
+    mergeDuplicatedRes = true // Whether to allow the merge of duplicate resources
+    enableFilterFiles = true // Whether to allow filter files
+    filterList = [ // file filter rules
+                   "*/arm64-v8a/*",
+                   "META-INF/*"
+    ]
+
+    enableFilterStrings = false // switch of filter strings
+    unusedStringPath = file("unused.txt").toPath() // strings will be filtered in this file
+    languageWhiteList = ["en", "zh"] // keep en,en-xx,zh,zh-xx etc. remove others.
+}

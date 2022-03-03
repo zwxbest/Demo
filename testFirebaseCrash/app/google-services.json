@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1036745920596",
+    "firebase_url": "https://happy-box-ba57b-default-rtdb.firebaseio.com",
+    "project_id": "happy-box-ba57b",
+    "storage_bucket": "happy-box-ba57b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036745920596:android:b382072696845fbb479dc1",
+        "android_client_info": {
+          "package_name": "game.share.box.task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036745920596-kk6aqkguv9jcuat7gsoob0v1qcjsml28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "game.share.box.task",
+            "certificate_hash": "1129e61beb86056d149ec966ad3c395550b0cab5"
+          }
+        },
+        {
+          "client_id": "1036745920596-tl4r2l8s9c5nj7h9ek481rok3icaom2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "game.share.box.task",
+            "certificate_hash": "d708be09f00c2e11b40981f1b42ebee8fa1e66ca"
+          }
+        },
+        {
+          "client_id": "1036745920596-fdfogm3g9pfidv3kdbjemsr991m30020.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa5FzuGc56XxPmNRfnCFMS2bN5W9AFApo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036745920596-fdfogm3g9pfidv3kdbjemsr991m30020.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

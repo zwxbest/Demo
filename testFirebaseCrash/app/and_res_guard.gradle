@@ -1,0 +1,57 @@
+apply plugin: 'AndResGuard'
+andResGuard {
+    mappingFile = null
+    use7zip = false
+    useSign = true
+    keepRoot = false
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "resources.arsc"
+    ]
+    whiteList = [
+            // your icon
+            "R.drawable.icon",
+            //友盟
+            "R.string.umeng*",
+            "R.drawable.umeng*",
+            "R.id.umeng*",
+            "R.anim.umeng*",
+            "R.color.umeng*",
+            "R.style.*UM*",
+            "R.style.umeng*",
+            //Firebase
+            "R.string.project_id",
+            // google-services
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key",
+
+            //Mintegral
+            "R.string.mbridge*",
+            "R.layout.mbridge*",
+            "R.drawable.mbridge*",
+            "R.anim.mbridge*",
+            "R.color.mbridge*",
+            "R.style.mbridge*",
+            "R.id.mbridge*",
+
+           "R.string.anythink_*",
+            "R.drawable.anythink_*",
+            "R.layout.anythink_*",
+            "R.id.anythink_*",
+
+            "R.string.com.crashlytics.*"
+    ]
+
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.10'
+        //path = "/usr/local/bin/7za"
+    }
+}
